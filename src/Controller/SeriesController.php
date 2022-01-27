@@ -17,7 +17,7 @@ class SeriesController extends AbstractController
     #[Route('/', name: 'series_index', methods: ['GET'])]
     public function index(SeriesRepository $seriesRepository): Response
     {
-        return $this->render('series/index.html.twig', [
+        return $this->render('series/login.html.twig', [
             'series' => $seriesRepository->findAll(),
         ]);
     }
